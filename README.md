@@ -118,3 +118,28 @@ Track of what's been built so far, in order.
 ## 📄 License
 
 This project is for personal learning and reference purposes.
+
+
+
+28-04-2026 
+[Arrays1](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays1.java)
+```java
+//Q1. Find the average of array elements
+
+//Q2. Multiply each element of array by 10
+
+//Q3. Search for an element in an Array {Linear Search}
+
+//Q4. Find the maximum element in an array
+
+//Q5. Return Sum of +ve and -ve numbers
+
+//Q6. Count the number of Zeroes and Ones
+
+//Q7. Find first Unsorted Element in Array
+
+//HW
+// Q8.Swap Alternate Elements in an Array
+// Q9.Print Array Intersection element
+// Q10.Print Alternate Extreme elements of an Array
+```
