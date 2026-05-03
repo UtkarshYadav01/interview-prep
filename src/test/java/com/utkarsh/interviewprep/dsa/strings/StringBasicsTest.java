@@ -41,5 +41,47 @@ class StringBasicsTest {
         System.out.println(test.question5("hello"));
     }
 
-    //https://www.programiz.com/online-compiler/3ENquaKcIkbZ1
+    @Test
+    @DisplayName("Q6. Count consonants in a string")
+    void question6() {
+        test.question6("hello");
+        test.question6("interview");
+    }
+
+    @Test
+    @DisplayName("Q7. Convert string to uppercase without using method")
+    void question7() {
+        test.question7("hello");
+        test.question7("java");
+    }
+
+    @Test
+    @DisplayName("Q8. Find frequency of a character")
+    void question8() {
+        test.question8("hello", 'l');
+        test.question8("interview", 'e');
+    }
+
+    @Test
+    @DisplayName("Q9. Remove all spaces from string")
+    void question9() {
+        test.question9("hello world");
+        test.question9("java is fun");
+    }
+
+    @Test
+    @DisplayName("Q10. Check if string contains only digits")
+    void question10() {
+        test.question10("12345");
+        test.question10("123a5");
+    }
+
+    @Test
+    @DisplayName("Q11. Count words in a sentence")
+    void question11() {
+        test.question11("Hello world");
+        test.question11("Java is very easy");
+    }
+
+    //https://www.programiz.com/online-compiler/55rsh6lBqVqGR
 }
