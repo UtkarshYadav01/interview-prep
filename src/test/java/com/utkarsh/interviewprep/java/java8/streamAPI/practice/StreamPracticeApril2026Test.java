@@ -1,4 +1,4 @@
-package com.utkarsh.interviewprep.java.java8.streams.practice;
+package com.utkarsh.interviewprep.java.java8.streamAPI.practice;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

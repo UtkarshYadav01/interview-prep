@@ -1,4 +1,4 @@
-package com.utkarsh.interviewprep.java.java8.streams.practice;
+package com.utkarsh.interviewprep.java.java8.streamAPI.practice;
 
 import java.time.LocalDate;
 import java.util.*;

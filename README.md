@@ -92,9 +92,9 @@ Track of what's been built so far, in order.
 | 1 | Project setup & pushed to GitHub | Initial commit with `pom.xml` and `.gitignore` |
 | 2 | Full folder structure created | All modules scaffolded under `com.utkarsh.interviewprep` |
 | 3 | README added | Project overview, structure, and progress log |
-| 4 | Java 8 Streams practice | [`StreamPracticeApril2026.java`](src/main/java/com/utkarsh/interviewprep/java/java8/streams/practice/StreamPracticeApril2026.java) |
+| 4 | Java 8 Streams practice | [`StreamPracticeApril2026.java`](src/main/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026.java) |
 | 5 | JUnit 5 added to `pom.xml` | `junit-jupiter 5.12.2` added as test dependency |
-| 6 | Stream tests written & passing ✅ | [`StreamPracticeApril2026Test.java`](src/test/java/com/utkarsh/interviewprep/java/java8/streams/practice/StreamPracticeApril2026Test.java) — all tests pass |
+| 6 | Stream tests written & passing ✅ | [`StreamPracticeApril2026Test.java`](src/test/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026Test.java) — all tests pass |
 
 ---
 
