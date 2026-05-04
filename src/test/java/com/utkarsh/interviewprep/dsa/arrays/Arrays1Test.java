@@ -78,6 +78,7 @@ class Arrays1Test {
     @DisplayName("Q10.Print Alternate Extreme elements of an Array")
     void question10() {
         test.question10(new int[]{1, 2, 3, 4, 5, 6});
+        test.question10(new int[]{1, 2, 3, 4, 5});
     }
 
     @Test

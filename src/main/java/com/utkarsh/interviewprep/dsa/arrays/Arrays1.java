@@ -193,11 +193,18 @@ public class Arrays1 {
         int left = 0;
         int right = arr.length - 1;
         while (left <= right) {
-            System.out.print(arr[left]);
-            left++;
-            System.out.print(arr[right]);
-            right--;
+            if (left == right) {
+                System.out.print(arr[left]);
+                return;
+            }
+            else {
+                System.out.print(arr[left]);
+                left++;
+                System.out.print(arr[right]);
+                right--;
+            }
         }
+        System.out.println();
     }
 
     void question() {
