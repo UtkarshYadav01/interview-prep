@@ -95,6 +95,11 @@ Track of what's been built so far, in order.
 | 4 | Java 8 Streams practice | [`StreamPracticeApril2026.java`](src/main/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026.java) |
 | 5 | JUnit 5 added to `pom.xml` | `junit-jupiter 5.12.2` added as test dependency |
 | 6 | Stream tests written & passing ✅ | [`StreamPracticeApril2026Test.java`](src/test/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026Test.java) — all tests pass |
+| 7 | Array basics practice added | [`Arrays1.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays1.java) — average, linear search, max element, zero/one count, intersections, alternate extremes |
+| 8 | SPG interview practice set added | [`SPG29thApr2026.java`](src/main/java/com/utkarsh/interview/apr26/SPG29thApr2026.java) — streams, sliding window, anagrams, HashMap internals, Spring bean scopes |
+| 9 | Arrays intermediate problems added | [`Arrays2.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays2.java) — reverse array, mode, frequency analysis, shifting, union |
+| 10 | VLink recursion interview practice added | [`VLink06thMay2026.java`](src/main/java/com/utkarsh/interview/may26/VLink06thMay2026.java) — recursive factorial and `n--` vs `--n` behavior |
+| 11 | Advanced array problems added | [`Arrays3.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays3.java) — segregate 0s/1s, unique element, missing number, XOR approach |
 
 ---
 
@@ -118,28 +123,3 @@ Track of what's been built so far, in order.
 ## 📄 License
 
 This project is for personal learning and reference purposes.
-
-
-
-28-04-2026 
-[Arrays1](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays1.java)
-```java
-//Q1. Find the average of array elements
-
-//Q2. Multiply each element of array by 10
-
-//Q3. Search for an element in an Array {Linear Search}
-
-//Q4. Find the maximum element in an array
-
-//Q5. Return Sum of +ve and -ve numbers
-
-//Q6. Count the number of Zeroes and Ones
-
-//Q7. Find first Unsorted Element in Array
-
-//HW
-// Q8.Swap Alternate Elements in an Array
-// Q9.Print Array Intersection element
-// Q10.Print Alternate Extreme elements of an Array
-```

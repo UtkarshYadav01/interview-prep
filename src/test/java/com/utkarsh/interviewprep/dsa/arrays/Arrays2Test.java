@@ -50,5 +50,6 @@ class Arrays2Test {
     void question7() {
         System.out.println(Arrays.toString(test.question7(new int[]{1, 2, 3}, new int[]{3, 4, 5})));
     }
-    //https://www.programiz.com/online-compiler/6n6HdX9sBm6Sj
+
+    //https://www.programiz.com/online-compiler/9jCK0KL06vIAp
 }
