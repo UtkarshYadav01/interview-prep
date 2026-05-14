@@ -100,6 +100,8 @@ Track of what's been built so far, in order.
 | 9 | Arrays intermediate problems added | [`Arrays2.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays2.java) — reverse array, mode, frequency analysis, shifting, union |
 | 10 | VLink recursion interview practice added | [`VLink06thMay2026.java`](src/main/java/com/utkarsh/interview/may26/VLink06thMay2026.java) — recursive factorial and `n--` vs `--n` behavior |
 | 11 | Advanced array problems added | [`Arrays3.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays3.java) — segregate 0s/1s, unique element, missing number, XOR approach |
+| 12 | VLink SQL interview practice added | [`VLink14thMay2026.java`](src/main/java/com/utkarsh/interview/may26/VLink14thMay2026.java) — SQL joins, LEFT JOIN explanation, employee-department query |
+| 13 | AWS cloud basics notes added | [`Aws notes.md`](src/main/java/com/utkarsh/interviewprep/devops/cloudbasics/Aws%20notes.md) — cloud and AWS interview preparation notes |
 
 ---
 
@@ -121,5 +123,3 @@ Track of what's been built so far, in order.
 ---
 
 ## 📄 License
-
-This project is for personal learning and reference purposes.
