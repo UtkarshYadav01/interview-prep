@@ -354,4 +354,6 @@ public class SPG29thApr2026 {
         https://www.programiz.com/online-compiler/1Z2nowYsKcAAc
         https://www.programiz.com/online-compiler/3HhfxcE7ELV5d
 
+        practice->16-05-2026
+        https://www.programiz.com/online-compiler/0Hhy46zCOLZNV
 */

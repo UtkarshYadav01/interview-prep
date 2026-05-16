@@ -1,12 +1,12 @@
 package com.utkarsh.interviewprep.java.java8.streamAPI.practice;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class StreamPracticeApril2026Test {
 
     StreamPracticeApril2026 test = new StreamPracticeApril2026();
@@ -38,138 +38,136 @@ class StreamPracticeApril2026Test {
             new StreamPracticeApril2026.Transaction("T5", LocalDate.of(2024, 1, 3), 100)
     );
 
-    @Test
-    @DisplayName("Q1.Sort List of Employees By Salary")
+    @Test @Order(1)
+    @DisplayName("Q1. Sort List of Employees By Salary")
     void question1() {
         System.out.println(test.question1(employees));
     }
 
-    @Test
-    @DisplayName("Q2.Calculate the avg age of a list of person Objects Using java Streams")
+    @Test @Order(2)
+    @DisplayName("Q2. Calculate average age of Person objects using Streams")
     void question2() {
         System.out.println(test.question2(persons));
     }
 
-    @Test
-    @DisplayName("Q3.Partition numbers in Even and Odd List")
+    @Test @Order(3)
+    @DisplayName("Q3. Partition numbers into Even and Odd lists")
     void question3() {
-        System.out.println(test.question3(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
+        System.out.println(test.question3(Arrays.asList(1,2,3,4,5,6,7,8,9,10)));
     }
 
-    @Test
-    @DisplayName("Q4.Group a list of words by their length using streams")
+    @Test @Order(4)
+    @DisplayName("Q4. Group words by their length")
     void question4() {
-        System.out.println(test.question4(Arrays.asList("Apple", "Banana", "Orange", "Pineapple", "Watermelon")));
+        System.out.println(test.question4(Arrays.asList("Apple","Banana","Orange","Pineapple","Watermelon")));
     }
 
-    @Test
-    @DisplayName("Q5.Count the occurrence of each element in a list")
+    @Test @Order(5)
+    @DisplayName("Q5. Count occurrence of each element in a list")
     void question5() {
-        System.out.println(test.question5(Arrays.asList("Apple", "Banana", "Orange", "Orange", "Orange", "Orange", "Pineapple", "Watermelon", "Apple", "Banana")));
+        System.out.println(test.question5(Arrays.asList("Apple","Banana","Orange","Orange","Orange","Orange","Pineapple","Watermelon","Apple","Banana")));
     }
 
-    @Test
-    @DisplayName("Q6.Group employees by department and calculate average salary")
+    @Test @Order(6)
+    @DisplayName("Q6. Group employees by department and average salary")
     void question6() {
         System.out.println(test.question6(employees));
     }
 
-    @Test
-    @DisplayName("Q7.Find the highest-paid employee in each department")
+    @Test @Order(7)
+    @DisplayName("Q7. Highest paid employee in each department")
     void question7() {
         System.out.println(test.question7(employees));
     }
 
-    @Test
-    @DisplayName("Q8.Find All Departments with More than 2 Employees")
+    @Test @Order(8)
+    @DisplayName("Q8. Departments with more than 2 employees")
     void question8() {
         System.out.println(test.question8(employees));
     }
 
-    @Test
-    @DisplayName("Q9.Find department with the highest average salary")
+    @Test @Order(9)
+    @DisplayName("Q9. Department with highest average salary")
     void question9() {
         System.out.println(test.question9(employees));
     }
 
-    @Test
-    @DisplayName("Q10.Find most frequent character in string")
+    @Test @Order(10)
+    @DisplayName("Q10. Most frequent character in a string")
     void question10() {
         System.out.println(test.question10("employees"));
     }
 
-    @Test
-    @DisplayName("Q11.Find First non-repeating character in string")
+    @Test @Order(11)
+    @DisplayName("Q11. First non-repeating character")
     void question11() {
         System.out.println(test.question11("employees"));
     }
 
-    //hard questions
-    @Test
-    @DisplayName("Q12.Find the most common first letter among all employee names")
+    @Test @Order(12)
+    @DisplayName("Q12. Most common first letter among employee names")
     void question12() {
         System.out.println(test.question12(employees));
     }
 
-    @Test
-    @DisplayName("Q13.Given a list of integers compute the average of every 3 element sliding window")
+    @Test @Order(13)
+    @DisplayName("Q13. Sliding window average (size 3)")
     void question13() {
-        System.out.println(test.question13(Arrays.asList(4, 8, 15, 16, 23, 42), 3));
+        System.out.println(test.question13(Arrays.asList(4,8,15,16,23,42), 3));
     }
 
-    @Test
-    @DisplayName("Q14.Find the longest word in a sentence ignoring case and punctuation")
+    @Test @Order(14)
+    @DisplayName("Q14. Longest word ignoring punctuation")
     void question14() {
         System.out.println(test.question14("The quick, brown fox jumped over the lazy dog!"));
     }
 
-    @Test
-    @DisplayName("Q15.Find top 3 most frequent words in a paragraph")
+    @Test @Order(15)
+    @DisplayName("Q15. Top 3 most frequent words")
     void question15() {
         System.out.println(test.question15("Java is great great. Java is object oriented. Java streams are powerful, and Java is fun!"));
     }
 
-    @Test
-    @DisplayName("Q16.Reverse each word in a sentence using streams")
+    @Test @Order(16)
+    @DisplayName("Q16. Reverse each word using Streams")
     void question16() {
         System.out.println(test.question16("The quick, brown fox jumped over the lazy dog!"));
     }
 
-    @Test
-    @DisplayName("Q17.From a list of transactions, find the day with the highest total spend")
+    @Test @Order(17)
+    @DisplayName("Q17. Day with highest transaction sum")
     void question17() {
         System.out.println(test.question17(transactions));
     }
 
-    @Test
-    @DisplayName("Q18.Categorize employees based on their salary (Low/Medium/High) Using streams.")
+    @Test @Order(18)
+    @DisplayName("Q18. Categorize employees by salary")
     void question18() {
         System.out.println(test.question18(employees));
     }
 
-    @Test
-    @DisplayName("Q19.Group characters by uppercase vs lowercase vs digit vs other")
+    @Test @Order(19)
+    @DisplayName("Q19. Group characters (uppercase/lowercase/digit/other)")
     void question19() {
-        System.out.println(test.question19(Arrays.asList('A', 'b', '3', 'Z', 'x', '#', '7', 'm', '@')));
+        System.out.println(test.question19(Arrays.asList('A','b','3','Z','x','#','7','m','@')));
     }
 
-    @Test
-    @DisplayName("Q20.Find all employees who worked in 3+ Departments")
+    @Test @Order(20)
+    @DisplayName("Q20. Employees working in 3+ departments")
     void question20() {
         System.out.println(test.question20(employees));
     }
 
-    @Test
-    @DisplayName("Q21.Find bigram frequency(Pairs of consecutive words) in Paragraphs")
+    @Test @Order(21)
+    @DisplayName("Q21. Bigram frequency in paragraph")
     void question21() {
         System.out.println(test.question21("Java is great and Java is fun. Java is powerful!"));
     }
 
-    @Test
+    @Test @Order(22)
     @DisplayName("Future Questions")
-    void question() {
+    void futureQuestions() {
         test.question();
         System.out.println("https://www.programiz.com/online-compiler/8mouLR64TzOu2");
     }
-
 }

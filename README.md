@@ -87,22 +87,23 @@ mvn test
 
 Track of what's been built so far, in order.
 
-| # | What | File / Notes |
-|---|------|------|
-| 1 | Project setup & pushed to GitHub | Initial commit with `pom.xml` and `.gitignore` |
-| 2 | Full folder structure created | All modules scaffolded under `com.utkarsh.interviewprep` |
-| 3 | README added | Project overview, structure, and progress log |
-| 4 | Java 8 Streams practice | [`StreamPracticeApril2026.java`](src/main/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026.java) |
-| 5 | JUnit 5 added to `pom.xml` | `junit-jupiter 5.12.2` added as test dependency |
-| 6 | Stream tests written & passing ✅ | [`StreamPracticeApril2026Test.java`](src/test/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026Test.java) — all tests pass |
-| 7 | Array basics practice added | [`Arrays1.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays1.java) — average, linear search, max element, zero/one count, intersections, alternate extremes |
-| 8 | SPG interview practice set added | [`SPG29thApr2026.java`](src/main/java/com/utkarsh/interview/apr26/SPG29thApr2026.java) — streams, sliding window, anagrams, HashMap internals, Spring bean scopes |
-| 9 | Arrays intermediate problems added | [`Arrays2.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays2.java) — reverse array, mode, frequency analysis, shifting, union |
-| 10 | VLink recursion interview practice added | [`VLink06thMay2026.java`](src/main/java/com/utkarsh/interview/may26/VLink06thMay2026.java) — recursive factorial and `n--` vs `--n` behavior |
-| 11 | Advanced array problems added | [`Arrays3.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays3.java) — segregate 0s/1s, unique element, missing number, XOR approach |
-| 12 | VLink SQL interview practice added | [`VLink14thMay2026.java`](src/main/java/com/utkarsh/interview/may26/VLink14thMay2026.java) — SQL joins, LEFT JOIN explanation, employee-department query |
-| 13 | AWS cloud basics notes added | [`Aws notes.md`](src/main/java/com/utkarsh/interviewprep/devops/cloudbasics/Aws%20notes.md) — cloud and AWS interview preparation notes |
-
+| # | Date | What | File / Notes |
+|---|---|---|---|
+| 1 | 20-04-2026 | Project setup & pushed to GitHub | Initial commit with `pom.xml` and `.gitignore` |
+| 2 | 21-04-2026 | Full folder structure created | All modules scaffolded under `com.utkarsh.interviewprep` |
+| 3 | 21-04-2026 | README added | Project overview, structure, and progress log |
+| 4 | 21-04-2026 | Java 8 Streams practice | [`StreamPracticeApril2026.java`](src/main/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026.java) |
+| 5 | 13-05-2026 | JUnit 5 added to `pom.xml` | `junit-jupiter 5.12.2` added as test dependency |
+| 6 | 13-05-2026 | Stream tests written & passing ✅ | [`StreamPracticeApril2026Test.java`](src/test/java/com/utkarsh/interviewprep/java/java8/streamAPI/practice/StreamPracticeApril2026Test.java) — all tests pass |
+| 7 | 02-05-2026 | Array basics practice added | [`Arrays1.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays1.java) — average, linear search, max element, zero/one count, intersections, alternate extremes |
+| 8 | 30-04-2026 | SPG interview practice set added | [`SPG29thApr2026.java`](src/main/java/com/utkarsh/interview/apr26/SPG29thApr2026.java) — streams, sliding window, anagrams, HashMap internals, Spring bean scopes |
+| 9 | 05-05-2026 | Arrays intermediate problems added | [`Arrays2.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays2.java) — reverse array, mode, frequency analysis, shifting, union |
+| 10 | 06-05-2026 | VLink recursion interview practice added | [`VLink06thMay2026.java`](src/main/java/com/utkarsh/interview/may26/VLink06thMay2026.java) — recursive factorial and `n--` vs `--n` behavior |
+| 11 | 05-05-2026 | Advanced array problems added | [`Arrays3.java`](src/main/java/com/utkarsh/interviewprep/dsa/arrays/Arrays3.java) — segregate 0s/1s, unique element, missing number, XOR approach |
+| 12 | 14-05-2026 | VLink SQL interview practice added | [`VLink14thMay2026.java`](src/main/java/com/utkarsh/interview/may26/VLink14thMay2026.java) — SQL joins, LEFT JOIN explanation, employee-department query |
+| 13 | 14-05-2026 | AWS cloud basics notes added | [`Aws notes.md`](src/main/java/com/utkarsh/interviewprep/devops/cloudbasics/Aws%20notes.md) — cloud and AWS interview preparation notes |
+| 14 | 16-05-2026 | String problems practice added | [`StringProblems.java`](src/main/java/com/utkarsh/interviewprep/dsa/strings/StringProblems.java) — sum of all substrings of a number, beauty sum placeholder problem |
+| 15 | 16-05-2026 | String problems JUnit tests added & passing ✅ | [`StringProblemsTest.java`](src/test/java/com/utkarsh/interviewprep/dsa/strings/StringProblemsTest.java) — substring sum and beauty sum test cases |
 ---
 
 ## 🎯 Who Is This For?
