@@ -9,20 +9,17 @@ public class Arrays3 {
     //https://www.geeksforgeeks.org/problems/segregate-0s-and-1s5106/1
     void segregate0and1(int[] arr) {
         // code here
-        int n = arr.length;
-        int i = 0;
-        int j = n - 1;
-        while (i < j) {
-            if (arr[i] == 1 && arr[j] == 0) {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-                i++;
-                j--;
-            } else if (arr[i] == 0) {
-                i++;
+        int low = 0;
+        int high = arr.length - 1;
+        while (low < high) {
+            if (arr[low] == 1 && arr[high] == 0) {
+                swap(arr, low, high);
+                low++;
+                high--;
+            } else if (arr[low] == 0) {
+                low++;
             } else {
-                j--;
+                high--;
             }
         }
     }
@@ -32,13 +29,13 @@ public class Arrays3 {
     //https://www.geeksforgeeks.org/problems/find-unique-element2632/1
     public int findUnique(int k, int[] arr) {
         // code here
-        Map<Integer,Integer> map= new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
-        for(int i: arr){
-            map.put(i,map.getOrDefault(i,0)+1);
+        for (int i : arr) {
+            map.put(i, map.getOrDefault(i, 0) + 1);
         }
-        for(Map.Entry<Integer,Integer> e: map.entrySet()){
-            if(e.getValue()==1){
+        for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+            if (e.getValue() == 1) {
                 return e.getKey();
             }
         }
@@ -79,4 +76,26 @@ public class Arrays3 {
     //Q4.Dutch national flag sort 0,1,2
     //https://www.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
     //https://leetcode.com/problems/sort-colors/description/
+    public void sortColors(int[] nums) {
+        int low = 0, mid = 0, high = nums.length - 1;
+        while (mid <= high) {
+            if (nums[mid] == 0) {
+                swap(nums, low, mid);
+                low++;
+                mid++;
+            } else if (nums[mid] == 1)
+                mid++;
+            else { // nums[mid] == 2
+                swap(nums, mid, high);
+                high--;
+            }
+        }
+    }
+
+    void swap(int[] nums, int a, int b) {
+        int temp = nums[a];
+        nums[a] = nums[b];
+        nums[b] = temp;
+    }
+
 }
