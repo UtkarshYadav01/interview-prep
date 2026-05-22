@@ -1,6 +1,7 @@
 package com.utkarsh.interviewprep.dsa.arrays;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Arrays4 {
 
@@ -42,7 +43,61 @@ public class Arrays4 {
     }
 
     //Q3.Find first repeating element in the array
+    //https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+    public int removeDuplicates(int[] nums) {
+        //2 pointers
+        int low = 0, high = 1;
+        while (high < nums.length) {
+            if (nums[low] == nums[high]) {
+                high++;
+            } else {
+                low++;
+                nums[low] = nums[high];
+                high++;
+            }
+        }
+        return low + 1;
+    }
 
     //Q4.Remove duplicates from sorted array
+    public int findDuplicate(int[] nums) {
+        //stream approach
+        Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.groupingBy(
+                        e -> e,
+                        Collectors.counting()
+                )).entrySet()
+                .stream().filter(e -> e.getValue() > 1)
+                .mapToInt(Map.Entry::getKey).findFirst().getAsInt();
+
+        //standard approach
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+        for (int n : nums) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
+        for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+            if (e.getValue() > 1) {
+                return e.getKey();
+            }
+        }
+        return -1;
+    }
+
     //Q5.Find pivot index
+    //https://leetcode.com/problems/find-pivot-index/description/
+    public int pivotIndex(int[] nums) {
+        int rsum=0, lsum=0;
+        for(int n:nums){
+            rsum+=n;
+        }
+        for(int i=0;i<nums.length;i++){
+            rsum-=nums[i];
+            if(rsum==lsum){
+                return i;
+            }
+            lsum+=nums[i];
+        }
+        return -1;
+    }
 }

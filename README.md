@@ -108,6 +108,9 @@ Track of what's been built so far, in order.
 | 17 | 17-05-2026 | Anagram string problem solutions added | [`Anagram.java`](src/main/java/com/utkarsh/interviewprep/dsa/strings/anagram/Anagram.java) — valid anagram using sorting approach and frequency-based string problems |
 | 18 | 19-05-2026 | Added VLink interview round notes, Java 17 vs 21 theory, virtual threads, scalability, load balancing, SQL answers, pair difference algorithms, even/odd partitioning, array DSA problems, Dutch National Flag solution, Two Sum, Three Sum, and comprehensive JUnit test coverage | `VLink19thMay2026.java`, `Arrays3.java`, `Arrays4.java`, `Arrays3Test.java` |
 | 19 | 20-05-2026 | Added Java interview practice questions covering increment operators, String immutability, and inverted star pattern printing with nested loops | `VLink20thMay2026.java` |
+| 20 | 22-05-2026 | Added array interview coding problems and comprehensive JUnit test coverage including remove duplicates, duplicate detection, and pivot index problems | `Arrays4.java`, `Arrays4Test.java` |
+| 21 | 22-05-2026 | Added PatchInfotech interview SQL practice and fixed Java class naming convention | `PatchInfotech21stMay2026.java` — last 7 days transaction SQL query |
+| 22 | 22-05-2026 | Added VLink interview reference compiler link | `VLink20thMay2026.java` |
 ---
 
 ## 🎯 Who Is This For?
