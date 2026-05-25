@@ -111,6 +111,8 @@ Track of what's been built so far, in order.
 | 20 | 22-05-2026 | Added array interview coding problems and comprehensive JUnit test coverage including remove duplicates, duplicate detection, and pivot index problems | `Arrays4.java`, `Arrays4Test.java` |
 | 21 | 22-05-2026 | Added PatchInfotech interview SQL practice and fixed Java class naming convention | `PatchInfotech21stMay2026.java` — last 7 days transaction SQL query |
 | 22 | 22-05-2026 | Added VLink interview reference compiler link | `VLink20thMay2026.java` |
+| 23 | 25-05-2026 | Added design patterns implementations and package structure fixes | Behavioral and structural design pattern demos added along with package corrections for strategy, factory, and singleton patterns |
+
 ---
 
 ## 🎯 Who Is This For?
