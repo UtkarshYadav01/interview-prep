@@ -256,7 +256,8 @@ Check running class here: [Factory.java](creational/factory/Factory.java)
 
 #### 4.3. Abstract Factory
 
-> Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
+> Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying
+> their concrete classes.
 
 ![](https://refactoring.guru/images/patterns/content/abstract-factory/abstract-factory-comic-1-en-1.5x.png?id=00f48d1c1854a6973a10d5488a82122a)
 ![](https://refactoring.guru/images/patterns/diagrams/abstract-factory/structure-1.5x.png)
@@ -351,6 +352,102 @@ Check running class here: [Factory.java](creational/factory/Factory.java)
 
 ---
 
+### 2. Proxy
+
+> The Proxy Design Pattern is a structural design pattern used to provide a placeholder or surrogate object that
+> controls access to another object. Instead of interacting directly with the real object, a client talks to the proxy,
+> which can add extra behavior like access control, lazy initialization, logging, or caching.
+
+
+![](https://refactoring.guru/images/patterns/diagrams/proxy/solution-en-1.5x.png)
+
+#### 2.1. Virtual Proxy
+
+> Delays object creation (lazy loading)
+
+> Useful for heavy objects (e.g., images, large files)
+
+#### 2.2. ProProtection Proxy
+
+> Controls access based on permissions
+
+> Example: role-based access
+
+#### 2.3. Remote Proxy
+
+> Represents objects located remotely (e.g., RPC, web services)
+
+```
+                     +----------------------------------+
+                     |         <<interface>>            |
+                     |              Image               |
+                     +----------------------------------+
+                     | + display() : void               |
+                     +----------------------------------+
+                              ^               ^
+                              |               |
+                           [is-a]          [is-a]
+                        (implements)     (implements)
+                              |               |
+      +-----------------------------+   +-------------------+
+      |         ProxyImage          |   |     RealImage     |
+      +-----------------------------+   +-------------------+
+      | - realImage : RealImage     |-->| - filename:String |
+      | - filename : String         |   +-------------------+
+      +-----------------------------+   | + RealImage(name) |
+      | + ProxyImage(name)          |   | + loadFromDisk()  |
+      | + display() : void          |   | + display()       |
+      +-----------------------------+   +-------------------+
+                   |
+             lazy creation
+             (if null create)
+                   |
+                   v
+          +-------------------+
+          |   RealImage obj   |
+          +-------------------+
+
+
+  Relationship summary:
+  +----------------------+------------------+-----------------------------+
+  | From                 | To               | Relationship                |
+  +----------------------+------------------+-----------------------------+
+  | ProxyImage           | Image            | is-a (implements)           |
+  | RealImage            | Image            | is-a (implements)           |
+  | ProxyImage           | RealImage        | has-a (field: realImage)    |
+  +----------------------+------------------+-----------------------------+
+
+
+  Runtime flow (main method):
+
+  Image img = new ProxyImage("photo.jpg");
+
+        img.display();
+            └─ Proxy checks:
+                   realImage == null ?
+                        YES
+                        └─ create RealImage("photo.jpg")
+                        └─ loadFromDisk()
+                        └─ display()
+
+        img.display();
+            └─ Proxy checks:
+                   realImage == null ?
+                        NO
+                        └─ directly call display()
+
+
+  Output:
+
+  Loading photo.jpg
+  Displaying photo.jpg
+  Displaying photo.jpg
+```
+
+[Proxy.java](structural/proxy/Proxy.java)
+
+---
+
 ## Behavioral Patterns
 
 > How objects communicate with each other
@@ -365,7 +462,8 @@ Check running class here: [Factory.java](creational/factory/Factory.java)
 
 > **One-to-many**
 
-> Observer is a behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they're observing.
+> Observer is a behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about
+> any events that happen to the object they're observing.
 
 > An alternative to this design pattern is the polling technique.
 
@@ -409,7 +507,8 @@ The alternative is **pushing** — the object notifies observers when it changes
 
 ### 2. Strategy
 
-> The Strategy Pattern is a behavioral design pattern that lets you define a family of algorithms, encapsulate each one, and make them interchangeable at runtime.
+> The Strategy Pattern is a behavioral design pattern that lets you define a family of algorithms, encapsulate each one,
+> and make them interchangeable at runtime.
 
 > Instead of using large **if-else** or **switch** statements, you delegate behavior to separate strategy classes.
 
@@ -549,3 +648,17 @@ Check running class here: [Strategy.java](behavioral/strategy/Strategy.java)
 ```
 
 [ChainOfResponsibilityDemo.java](behavioral/chainofresponsibility/ChainOfResponsibilityDemo.java)
+
+----
+
+### 4. State
+
+>
+![]()
+```
+
+```
+
+[State.java](behavioral/state/State.java)
+
+---
