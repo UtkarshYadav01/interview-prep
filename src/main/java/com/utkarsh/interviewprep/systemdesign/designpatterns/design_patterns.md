@@ -653,12 +653,167 @@ Check running class here: [Strategy.java](behavioral/strategy/Strategy.java)
 
 ### 4. State
 
+> The State Design Pattern is a **behavioral design** pattern that allows an object to change its behavior when its internal state changes. The object appears to change its class at runtime.
 >
-![]()
+![](https://refactoring.guru/images/patterns/diagrams/state/problem2-en-1.5x.png)
+
+```
++----------------+
+|    Context     |
++----------------+
+| - state        |
++----------------+
+| + setState()   |
+| + request()    |
++----------------+
+        |
+        v
++----------------+
+|    State       | <---- Interface
++----------------+
+| + handle()     |
++----------------+
+      / \
+     /   \
++---------+   +---------+
+| StateA  |   | StateB  |
++---------+   +---------+
+| handle()|   | handle()|
++---------+   +---------+
 ```
 
+state machine diagram(SMD)
+
+![](https://refactoring.guru/images/patterns/diagrams/state/problem1-1.5x.png)
+
+vending machine example
+
+SMD
+
+```plantuml
+@startuml
+
+[*] --> NoCoinState
+
+state NoCoinState
+state HasCoinState
+state DispenseState
+state SoldOutState
+
+NoCoinState --> HasCoinState : insertCoin()
+HasCoinState --> NoCoinState : returnCoin()
+
+HasCoinState --> DispenseState : selectItem()
+
+DispenseState --> NoCoinState : dispense()\n[item available]
+DispenseState --> SoldOutState : dispense()\n[last item dispensed]
+
+SoldOutState --> NoCoinState : refill()
+
+NoCoinState --> NoCoinState : selectItem()\ndispense()\nreturnCoin()\nrefill()
+
+HasCoinState --> HasCoinState : insertCoin()\ndispense()\nrefill()
+
+DispenseState --> DispenseState : insertCoin()\nselectItem()\nreturnCoin()\nrefill()
+
+SoldOutState --> SoldOutState : insertCoin()\nselectItem()\ndispense()\nreturnCoin()
+
+@enduml
+```
+
+table
+
+```
+| State \ Action  | insertCoin   | selectItem    | dispense                     | returnCoin   | refill      |
+|-----------------|--------------|---------------|------------------------------|--------------|-------------|
+| NoCoinState     | HasCoinState | —             | —                            | —            | —           |
+| HasCoinState    | —            | DispenseState | —                            | NoCoinState  | —           |
+| DispenseState   | —            | —             | NoCoinState / SoldOutState   | —            | —           |
+| SoldOutState    | —            | —             | —                            | —            | NoCoinState |
+```
+
+uml
+
+```mermaid
+classDiagram
+    class VendingMachine {
+        -VendingMachineState state
+        +insertCoin(int coin)
+        +selectItem()
+        +dispense()
+        +returnCoin()
+        +refill(int q)
+    }
+
+    class VendingMachineState {
+        <<interface>>
+        +insertCoin(machine, int coin)
+        +selectItem(machine)
+        +dispense(machine)
+        +returnCoin(machine)
+        +refill(machine, int q)
+    }
+
+    class NoCoinState {
+        +insertCoin(machine, int coin)
+        +selectItem(machine)
+        +dispense(machine)
+        +returnCoin(machine)
+        +refill(machine, int q)
+    }
+
+    class HasCoinState {
+        +insertCoin(machine, int coin)
+        +selectItem(machine)
+        +dispense(machine)
+        +returnCoin(machine)
+        +refill(machine, int q)
+    }
+
+    class DispenseState {
+        +insertCoin(machine, int coin)
+        +selectItem(machine)
+        +dispense(machine)
+        +returnCoin(machine)
+        +refill(machine, int q)
+    }
+
+    class SoldOutState {
+        +insertCoin(machine, int coin)
+        +selectItem(machine)
+        +dispense(machine)
+        +returnCoin(machine)
+        +refill(machine, int q)
+    }
+
+    VendingMachine *-- VendingMachineState: has-a
+    NoCoinState ..|> VendingMachineState
+    HasCoinState ..|> VendingMachineState
+    DispenseState ..|> VendingMachineState
+    SoldOutState ..|> VendingMachineState
+    NoCoinState --> HasCoinState: insertCoin()
+    HasCoinState --> NoCoinState: returnCoin()
+    HasCoinState --> DispenseState: selectItem()
+    DispenseState --> NoCoinState: dispense()
+    DispenseState --> SoldOutState: dispense()
+    SoldOutState --> NoCoinState: refill()
 ```
 
 [State.java](behavioral/state/State.java)
+
+---
+
+----
+
+### 999. next design pattern placeholder
+
+> this is a placeholder 
+![]()
+
+```
+
+```
+
+[pattern.java](behavioral/state/pattern.java)
 
 ---
